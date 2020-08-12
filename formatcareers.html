@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+
+<body>
+	<button onclick="fix()">Fix</button>
+	<textarea id="input" cols="30" rows="10" placeholder="Input"></textarea>
+	<textarea id="output" cols="30" rows="10" placeholder="Output" disabled></textarea>
+
+	<script>
+		function replaceAll(string, search, replace) {
+			return string.split(search).join(replace);
+		}
+		function copyToClipboard(text) {
+			const elem = document.createElement('textarea');
+			elem.value = text;
+			document.body.appendChild(elem);
+			elem.select();
+			document.execCommand('copy');
+			document.body.removeChild(elem);
+		}
+		function fix() {
+			const input = document.getElementById("input").value
+			var output = replaceAll(input, "	", " ")
+			output = replaceAll(output, " \n", " ")
+			output = replaceAll(output, "\n", " ")
+			document.getElementById("output").value = output
+			copyToClipboard(output)
+		}
+
+	</script>
+</body>
+
+</html>

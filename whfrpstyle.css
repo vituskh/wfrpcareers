@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat+Brush);
+@import url(https://fonts.googleapis.com/css?family=Copse);
+body {
+	background-image: url("./background_paper.jpg");
+	font-family: 'Copse', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, Verdana;
+	font-size: 1.0em;
+   }
+form {
+	font-family: 'Copse', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, Verdana;
+	font-size: 1.0em;
+   }
+h1 {
+	display: inline;
+	font-family: 'Caveat Brush', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, Verdana;
+	font-size: 2.0em;
+	margin: 0.05em 0.25em 0.25em 0em;
+	color: #222222;
+}
+h2 {
+	display: inline;
+	font-family: 'Caveat Brush', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, Verdana;
+	font-size: 1.4em;
+	margin: 0.05em 0.25em 0.25em 0em;
+	color: #222222;
+}
+h4 {
+	display: inline;
+ 	font-family: 'Caveat Brush', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, Verdana;
+	font-size: 1.3em;
+	margin: -2.05em 0.25em 2.5em 0em;
+	color: #222222;				
+}
+h6 {
+	font-size: 0.8em;
+	font-weight: 400;
+}
+.bigletter {
+	font-size: 125% ;
+}
+p {
+	text-indent: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+p.noindent {
+	text-indent: 0.0em;
+}
+li {
+	list-style-type: circle;
+}
+table {
+	border: 0.1em solid black;
+	border-collapse: collapse;
+	margin: 0.25em;
+}
+table.auto {
+	table-layout: auto;
+}
+th {
+	background-color: #000000;
+	color:#ffffc7;
+	padding: 0.2em;
+	text-align: left;
+	height:0.7em;
+	font-size: 0.9em;
+	text-indent: 0.0em;
+}
+th.wounds {
+	text-align: center;
+	width: 7em;
+}
+tr {
+	background-color: #ffffff;
+}
+
+tr:nth-child(2n){
+	background-color: #dddddd;
+}
+
+td {
+	border: 0.1em solid black;
+	width: 2.5em;
+	font-size: 0.9em;
+	text-indent: 0.0em;
+	padding: 0.5em;
+
+}
+.w4 { min-width: 4.0em; }
+.w6 { min-width: 6.0em; }
+.w8 { min-width: 8.0em; }
+.w10 { min-width: 10.0em; }
+.w12 { min-width: 12.0em; }
+.w14 { min-width: 14.0em; }
+.w16 { min-width: 16.0em; }
+.w18 { min-width: 18.0em; }
+.w20 { min-width: 20.0em; }
+.w25 { min-width: 25.0em; }
+
+.profileTable {
+	text-align: center;
+	float:left;
+}
+.tg  {font-family:'Copse',"Trebuchet MS", Helvetica, sans-serif; border-collapse:collapse;border-spacing:0;border-style:solid;border-width:2px;}
+.tg .tg-9lps {min-width: 17em;}
+.tg td{font-size: 0.9em;padding:5px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;min-width: 30px; }
+.tg .tg-shwv{text-align:center;vertical-align:top}
+.tg .tg-42ue{font-weight:bold;color:#ffffc7;vertical-align:top}
+.tg .tg-8fhc{font-weight:bold;text-align:center;vertical-align:top}
+.profileBold {
+	font-weight: bold;
+}
+.floating-box {
+	width: 40em;
+	padding: 0.8em;
+	border: 0.2em solid #222222;
+	margin: 1em;
+	display: inline-block;
+	background-color: rgba(200,200,200,.5);
+	resize: both;
+	overflow: auto;
+	box-shadow: 0.6em 0.6em 0.3em #999;
+}
+button {
+	background-color: #F2E394;
+	border: none;
+	color: black;
+	padding: 0.3em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0.2em;
+	cursor:pointer;
+}
+input {
+	padding: 0.3em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0.2em;
+}
+.big {
+	background-color: #8C4646;
+	color: white;
+	padding: 0.5em 1.0em 0.5em 1.0em;
+	margin: 0.2em;
+	font-size: 0.8em;
+	border: 0.2em solid;
+	border-radius: 1.5em;
+}
+.bigreverse {
+	background-color: white;
+	color: #8C4646;
+	padding: 0.5em 1.0em 0.5em 0.5em;
+	margin: 0.2em;
+	font-size: 1.2em;
+	border: 0.2em solid;
+	border-radius: 0.5em;
+}
+.green {
+	background-color: #588C7E;
+	color: white;
+}
+.yellow {
+	background-color: #F2E394;
+}
+.orange {
+	background-color: #F2AE72;
+}
+.red {
+	background-color: #D96459;
+	color: white;
+}
+.darkred {
+	background-color: #8C4646;
+	color: white;
+}
+.close{
+	display:block;
+	float:right;
+	width:34px;
+	height:34px;
+	background-color: Transparent;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+}
+.float {
+	float:right;
+	margin: 0.2em 0.2em 0.2em 0.2em;
+}
+img.max150 {
+	height: auto; 
+	width: auto; 
+	max-width: 150px; 
+	max-height: 150px;
+}
+/*@media print{
+	body {
+		zoom: 50%;
+	}
+	hr {
+		display:none;
+	}
+	button {
+		display:none;
+	}
+	.floating-box {
+		background-color: none;
+		box-shadow: none;
+	}
+	.close {
+		display:none;
+	}
+}*/
