@@ -112,6 +112,7 @@ function showCareer(careerName) {
 		document.getElementById(previousButtonName).classList.remove('green');
 		document.getElementById(previousButtonName).classList.remove('orange');
 		document.getElementById(previousButtonName).classList.remove('red');
+		document.getElementById(previousButtonName).classList.remove('darkred');
 	}
 
 	// set current to orange
@@ -138,6 +139,22 @@ function showCareer(careerName) {
 			const element2 = careers[o];
 			if (element2.name.toLowerCase() == element.toLowerCase()) {
 				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.add("red")
+				
+			}
+		}
+	}
+
+	// set entries that are also exits to dark red
+
+	for (let i = 0; i < career.entries.length; i++) {
+		const element = career.entries[i];
+		if(career.exits.indexOf(element) == -1) continue
+		for (let o = 0; o < careers.length; o++) {
+			const element2 = careers[o];
+			if (element2.name.toLowerCase() == element.toLowerCase()) {
+				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.add("darkred")
+				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.remove("red")
+				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.remove("green")
 				
 			}
 		}
