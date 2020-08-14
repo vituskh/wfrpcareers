@@ -1,5 +1,3 @@
-//tak https://json-to-js.com/
-
 const careers = [
   {
     name: 'Abbot',
@@ -134,7 +132,9 @@ const careers = [
     },
     description: 'The splinter order of Morrites, known as the Fellowship of the Shroud, takes a much more active view of their duties to Morr than the mainstream cult. Its members include warriors, priests, and Vampire hunters, but in many situations, a far subtler hand is needed, and such are the abilities of the Agents of the Shroud. These scholarly types are trained in careful observation, medical examination, and logical deduction, so they may identify Vampire or Undead activity without being detected. Some of them turn their results over to more martially skilled members of their cult, but they are quite capable of enacting their own justice and putting an end to those the Fellowship call “the Enemies of Life.”.',
     skills: [
-      'Academic Knowledge (Necromancy, Theology, plus any one)',
+      'Academic Knowledge (Necromancy',
+      'Theology',
+      'plus any one)',
       'Charm',
       'Common Knowledge (The Empire, Tilea)',
       'Concealment',
@@ -157,7 +157,8 @@ const careers = [
       'Schemer'
     ],
     trappings: [
-      'Medium Armour (Leather Jack, Mail Shirt)',
+      'Medium Armour (Leather Jack',
+      'Mail Shirt)',
       'Best Hand Weapon',
       '4 Stakes',
       'a braided rope of Garlic',
@@ -173,10 +174,12 @@ const careers = [
     ],
     exits: [
       'Killer of the Dead',
+      'Priest (Morr only)',
       'Scholar',
       'Spy',
       'Vampire Hunter',
-      'Witch Hunter'
+      'Witch Hunter',
+      'Priest'
     ],
     notes: '',
     source: 'NDM'
@@ -221,24 +224,32 @@ const careers = [
       '2d10 leaflets for various causes'
     ],
     entries: [
-      'None',
       'Burgher',
       'Captain',
-      'Exciseman',
       'Herald',
       'Highwayman',
+      'Scribe',
+      'Servant',
+      'Student',
+      'Zealot',
+      'Exciseman',
       'Lamplighter',
       'Litigant',
       'Newssheet Vendor',
-      'Scribe',
       'Seer',
-      'Servant',
-      'Skald',
-      'Student',
-      'Zealot'
+      'Skald'
     ],
     exits: [
-      'None'
+      'Charlatan',
+      'Demagogue',
+      'Outlaw',
+      'Politician',
+      'Rogue',
+      'Zealot',
+      'Ex-Convict',
+      'Herrimault',
+      'Pamphleteer',
+      'Raconteur'
     ],
     notes: '',
     source: 'WHFR'
@@ -468,7 +479,12 @@ const careers = [
       'Flagellant',
       'High Priest',
       'Scholar',
-      'Witch Hunter'
+      'Witch Hunter',
+      'Abbot',
+      'Cantor',
+      'Catechist',
+      'Cult Attendant',
+      'Warrior Priest'
     ],
     notes: '',
     source: 'WHFR'
@@ -527,7 +543,9 @@ const careers = [
       'Grave Robber',
       'Merchant',
       'Physician',
-      'Scholar'
+      'Scholar',
+      'Astrologer',
+      'Hedgecraft Apprentice'
     ],
     notes: '',
     source: 'Sigmar\'s Heir'
@@ -630,7 +648,9 @@ const careers = [
     ],
     exits: [
       'Ice Maiden',
-      'Witch'
+      'Initiate (of Ulric)',
+      'Witch',
+      'Initiate'
     ],
     notes: 'You must be female to enter this career.',
     source: 'RotIQ'
@@ -675,20 +695,24 @@ const careers = [
       'Printed Book'
     ],
     entries: [
+      'Hedge Wizard',
+      'Scholar',
+      'Scribe',
+      'Student',
       'Apothecary',
       'Astrologer',
       'Dilettante',
       'Embalmer',
-      'Hedge Wizard',
       'Hedgecraft Apprentice',
-      'Scholar',
-      'Scribe',
-      'Student',
       'Warlock',
       'Witch'
     ],
     exits: [
-      'None'
+      'Journeyman Wizard',
+      'Scholar',
+      'Scribe',
+      'Apothecary',
+      'Astrologer'
     ],
     notes: 'If you want to be able to cast spells right away, you should increase your Magic Characteristic with your free advance during character creation.',
     source: 'WHFR'
@@ -804,7 +828,9 @@ const careers = [
       'Engineer',
       'Guild Master',
       'Merchant',
-      'Militiaman'
+      'Militiaman',
+      'Forger',
+      'Pamphleteer'
     ],
     notes: '',
     source: 'WHFR'
@@ -872,7 +898,8 @@ const careers = [
       'Outlaw Chief',
       'Rogue',
       'Sergeant',
-      'Witch Hunter'
+      'Witch Hunter',
+      'Cloaked Brother'
     ],
     notes: '',
     source: 'WHFR'
@@ -971,7 +998,8 @@ const careers = [
     },
     description: 'Most oblast communities are led by atamans (female: atamankas). Gospodar atamans are normally druzhina whose families have ruled locally for generations. By comparison, most Ungols elect their atamans or select them according to obscure (often martial) traditions, for most of their noble bloodlines were wiped out by the Gospodars long ago. Atamans bear great responsibilities, for all important local matters are decided by them, especially those concerning security and law. Further, if there are no local priests, atamans also take on the responsibility for the spiritual wellbeing of their people, leading religious rites and ceremonies.',
     skills: [
-      'Academic Knowledge (History or Law, Strategy Tactics or Theology)',
+      'Academic Knowledge (History or Law',
+      'Strategy Tactics or Theology)',
       'Charm or Intimidate',
       'Command',
       'Common Knowledge (Kislev or Troll Country)',
@@ -1148,12 +1176,16 @@ const careers = [
       'One Set of Good Craftmanship Clothing'
     ],
     entries: [
-      'None',
       'Bodyguard',
       'Jailer'
     ],
     exits: [
-      'None'
+      'Militiaman',
+      'Politician',
+      'Protagonist',
+      'Racketeer',
+      'Smuggler',
+      'Toll Keeper'
     ],
     notes: '',
     source: 'WHFR'
@@ -1196,14 +1228,21 @@ const careers = [
       'Trade Tools (Barber-Surgeon)'
     ],
     entries: [
+      'Initiate',
+      'Student',
       'Apothecary',
       'Dilettante',
-      'Hedgecraft Apprentice',
-      'Initiate',
-      'Student'
+      'Hedgecraft Apprentice'
     ],
     exits: [
-      'None'
+      'Interrogator',
+      'Grave Robber',
+      'Physician',
+      'Tradesman',
+      'Vagabond',
+      'Agent of the Shroud',
+      'Apothecary',
+      'Embalmer'
     ],
     notes: '',
     source: 'WHFR'
@@ -1335,7 +1374,8 @@ const careers = [
     },
     description: 'Whilst the cult of Morr has few, if any, official templars, they do have the Black Guard. These universally dour and serious warriors have an even more serious responsibility: to guard both the living and the dead from the endless malice of the Undead and those who would raise them. For the most part, they are a defensive order, protecting the great temples and graveyards of the Empire and the dignitaries of the cult, only riding to war in exceptional circumstances, such as during a crusade against the Vampire counts. Unlike most knights, they are trained in the use of ranged weapons to prevent their enemies from bringing their strength to bear in close quarters. This, along with their foreboding black obsidian armour and their strict vow of silence when on duty, means they are shunned by most other knightly orders, but such is the price of duty.',
     skills: [
-      'Academic Knowledge (Necromancy, Theology)',
+      'Academic Knowledge (Necromancy',
+      'Theology)',
       'Dodge Blow',
       'Intimidate',
       'Perception',
@@ -1368,9 +1408,12 @@ const careers = [
     exits: [
       'Captain',
       'Champion',
+      'Priest (Morr only)',
       'Knight of the Inner Circle',
       'Knight of the Raven',
-      'Vampire Hunter'
+      'Vampire Hunter',
+      'Killer of the Dead',
+      'Priest'
     ],
     notes: '',
     source: 'NDM'
@@ -1426,7 +1469,11 @@ const careers = [
       'Marine',
       'Navigator',
       'Seaman',
-      'Smuggler'
+      'Smuggler',
+      'Riverwarden',
+      'Stevedore',
+      'Swampaire',
+      'Wrecker'
     ],
     notes: '',
     source: 'WHFR'
@@ -1714,7 +1761,9 @@ const careers = [
       'Protagonist',
       'Scout',
       'Targeteer',
-      'Vampire Hunter'
+      'Vampire Hunter',
+      'Enforcer',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -1774,7 +1823,13 @@ const careers = [
       'Merchant',
       'Militiaman',
       'Tradesman',
-      'Valet'
+      'Valet',
+      'Freeholder',
+      'Horse Coper',
+      'Litigant',
+      'Muleskinner',
+      'Newssheet Vendor',
+      'Pamphleteer'
     ],
     notes: '',
     source: 'WHFR'
@@ -1894,7 +1949,10 @@ const careers = [
       'Smuggler',
       'Spy',
       'Tradesman',
-      'Vagabond'
+      'Vagabond',
+      'Dung Collector',
+      'Frogwife',
+      'Raconteur'
     ],
     notes: '',
     source: 'WHFR'
@@ -2027,14 +2085,18 @@ const careers = [
       'Runelord',
       'Sergeant',
       'Slaver',
-      'Warleader'
+      'Warleader',
+      'Winged Lancer'
     ],
     exits: [
       'Agitator',
       'Explorer',
       'Merchant',
       'Outlaw Chief',
-      'Politician'
+      'Politician',
+      'Ambassador',
+      'Ataman',
+      'Border Courtier'
     ],
     notes: '',
     source: 'WHFR'
@@ -2097,7 +2159,9 @@ const careers = [
       'Outlaw',
       'Scout',
       'Vagabond',
-      'Veteran'
+      'Veteran',
+      'Man-at-Arms',
+      'Yeoman'
     ],
     notes: '',
     source: 'KotG'
@@ -2219,7 +2283,8 @@ const careers = [
       'Fence',
       'Master Thief',
       'Racketeer',
-      'Vagabond'
+      'Vagabond',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -2369,22 +2434,25 @@ const careers = [
     ],
     entries: [
       'Assassin',
-      'Black Guard',
       'Duellist',
-      'Grandmaster',
       'Judicial Champion',
-      'Knight Panther',
-      'Knight of the Blazing Sun',
       'Knight of the Inner Circle',
-      'Knight of the Raven',
-      'Scourge of God',
       'Targeteer',
       'Veteran',
-      'Warleader',
-      'Witch Hunter'
+      'Witch Hunter',
+      'Black Guard',
+      'Grandmaster',
+      'Knight Panther',
+      'Knight of the Blazing Sun',
+      'Knight of the Raven',
+      'Scourge of God',
+      'Warleader'
     ],
     exits: [
-      'None'
+      'Assassin',
+      'Scout',
+      'Sergeant',
+      'Witch Hunter'
     ],
     notes: '',
     source: 'WHFR'
@@ -2438,7 +2506,8 @@ const careers = [
       'Miner',
       'Scout',
       'Vagabond',
-      'Woodsman'
+      'Woodsman',
+      'Lamplighter'
     ],
     notes: '',
     source: 'WHFR'
@@ -2527,7 +2596,8 @@ const careers = [
       'Demagogue',
       'Outlaw',
       'Politician',
-      'Spy'
+      'Spy',
+      'Herrimault'
     ],
     notes: '',
     source: 'WHFR'
@@ -2777,7 +2847,11 @@ const careers = [
       'Roadwarden',
       'Scout',
       'Smuggler',
-      'Toll Keeper'
+      'Toll Keeper',
+      'Cartographer',
+      'Drover',
+      'Ferryman',
+      'Herrimault'
     ],
     notes: '',
     source: 'WHFR'
@@ -2845,7 +2919,10 @@ const careers = [
       'Noble Lord',
       'Politician',
       'Steward',
-      'Spy'
+      'Spy',
+      'Border Courtier',
+      'Cloaked Brother',
+      'Cult Attendant'
     ],
     notes: '',
     source: 'WHFR'
@@ -2915,7 +2992,9 @@ const careers = [
       'Demagogue',
       'Master Thief',
       'Outlaw Chief',
-      'Politician'
+      'Politician',
+      'Cloaked Brother',
+      'Faceless'
     ],
     notes: '',
     source: 'WHFR'
@@ -3117,7 +3196,10 @@ const careers = [
       '10 Yards of Rope'
     ],
     entries: [
-      'None'
+      'Rat Catcher',
+      'Shieldbreaker',
+      'Soldier',
+      'Watchman'
     ],
     exits: [
       'Engineer',
@@ -3213,7 +3295,10 @@ const careers = [
       'Friar',
       'Mercenary',
       'Outlaw Chief',
-      'Politician'
+      'Politician',
+      'Cloaked Brother',
+      'Faceless',
+      'Pamphleteer'
     ],
     notes: '',
     source: 'WHFR'
@@ -3276,7 +3361,8 @@ const careers = [
       'Student',
       'Tomb Robber',
       'Tradesman',
-      'Verenean Investigator'
+      'Verenean Investigator',
+      'Rapscallion'
     ],
     notes: 'A Dilettante may not, in this career, buy a skill he already possesses, and thus may not gain any Skill Mastery bonuses. He does not lose any he already has.',
     source: 'CC'
@@ -3486,7 +3572,8 @@ const careers = [
     },
     description: 'Not everyone wishes to be interred in Morr’s Gardens. Some prefer a more preserving process after their death, for themselves or their animal companions, and they turn to the embalmers. These masters of pickling, preservation, and taxidermy are not just a fad of the wealthy. The individuals increasingly have a hand in the growing field of medicine, and money can be made hand over fist in selling their curios to customers with a particular purpose in mind. Many priests of Morr (and much of the general population) consider cutting bits off people and putting them in jars to be an assault on both the body and spirit of the deceased, and Witch Hunters are well aware of how easily such merchants turn to the dark arts. As such, many embalmers choose to hide their Human exhibits behind their animal displays or their surgery services until the day scientists of their calibre are finally given the respect and recognition they deserve.',
     skills: [
-      'Academic Knowledge (Necromancy, Science)',
+      'Academic Knowledge (Necromancy',
+      'Science)',
       'Evaluate',
       'Haggle',
       'Heal',
@@ -3630,7 +3717,9 @@ const careers = [
       'Explorer',
       'Guild Master',
       'Pistolier',
-      'Smuggler'
+      'Smuggler',
+      'Artillerist',
+      'Pamphleteer'
     ],
     notes: '',
     source: 'WHFR'
@@ -3665,7 +3754,15 @@ const careers = [
       'Any one of: Animal Training, Blather, Charm Animal, Hypnotism, Ride, Scale Sheer Surface, Sleight of Hand, Ventriloquism'
     ],
     talents: [
-      'Any two of: Lightning Reflexes, Mimic, Public Speaking, Quick Draw, Sharpshooter, Specialist Weapon Group (Throwing), Trick Riding, Very Strong, Wrestling'
+      'Any two of: Lightning Reflexes',
+      'Mimic',
+      'Public Speaking',
+      'Quick Draw',
+      'Sharpshooter',
+      'Specialist Weapon Group (Throwing)',
+      'Trick Riding',
+      'Very Strong',
+      'Wrestling'
     ],
     trappings: [
       'Light Armour (Leather Jerkin)',
@@ -3692,7 +3789,14 @@ const careers = [
       'Minstrel',
       'Rogue',
       'Thief',
-      'Vagabond'
+      'Vagabond',
+      'Animal Trainer',
+      'Bear Tamer',
+      'Cantor',
+      'Gambler',
+      'Pamphleteer',
+      'Raconteur',
+      'Skald'
     ],
     notes: '',
     source: 'WHFR'
@@ -3746,7 +3850,8 @@ const careers = [
       'Rogue',
       'Seaman',
       'Student',
-      'Vagabond'
+      'Vagabond',
+      'Litigant'
     ],
     notes: 'Only Elves can enter this career.',
     source: 'WHFR'
@@ -3797,7 +3902,8 @@ const careers = [
       'Duellist',
       'Highwayman',
       'Protagonist',
-      'Rogue'
+      'Rogue',
+      'Cadet'
     ],
     notes: 'If this is your Starting Career, you are from Estalia, but have come to the Empire to seek adventure.',
     source: 'WHFR'
@@ -4061,7 +4167,8 @@ const careers = [
       'Captain',
       'Merchant',
       'Sea Captain',
-      'Spy'
+      'Spy',
+      'Badlands Ranger'
     ],
     notes: '',
     source: 'WHFR'
@@ -4133,7 +4240,8 @@ const careers = [
       'Demagogue',
       'Explorer',
       'Highwayman',
-      'Outlaw Chief'
+      'Outlaw Chief',
+      'Village Elder'
     ],
     notes: 'Women can only become Faceless if disguised as men',
     source: 'KotG'
@@ -4190,7 +4298,8 @@ const careers = [
       'Merchant',
       'Militiaman',
       'Politician',
-      'Steward'
+      'Steward',
+      'Animal Trainer'
     ],
     notes: '',
     source: 'Career Compendium'
@@ -4291,7 +4400,8 @@ const careers = [
       'Specialist Weapon Group (Gunpowder) or Street Fighting'
     ],
     trappings: [
-      'Crossbow with 10 bolts or Blunderbuss with powder/ammunition enough for 10 shots, Light Armour (Leather Jack)'
+      'Crossbow with 10 bolts or Blunderbuss with powder/ammunition enough for 10 shots',
+      'Light Armour (Leather Jack)'
     ],
     entries: [
       'Coachman',
@@ -4303,7 +4413,10 @@ const careers = [
       'Highwayman',
       'Roadwarden',
       'Seaman',
-      'Smuggler'
+      'Smuggler',
+      'Riverwarden',
+      'Swampaire',
+      'Wrecker'
     ],
     notes: '',
     source: 'WHFR'
@@ -4356,7 +4469,10 @@ const careers = [
     exits: [
       'Bounty Hunter',
       'Vagabond',
-      'Vampire Hunter'
+      'Vampire Hunter',
+      'Agent of the Shroud',
+      'Mercenary',
+      'Scout'
     ],
     notes: 'Only Halflings can enter this career.',
     source: 'WHFR'
@@ -4408,7 +4524,9 @@ const careers = [
       'Merchant',
       'Militiaman',
       'Navigator',
-      'Seaman'
+      'Seaman',
+      'Freeholder',
+      'Whaler'
     ],
     notes: 'During character creation, if you take Common Knowledge (the Wasteland), your character can be from the great port of Marienburg at your option.',
     source: 'WHFR'
@@ -4462,7 +4580,10 @@ const careers = [
       'Interrogator',
       'Priest',
       'Soldier',
-      'Veteran'
+      'Veteran',
+      'Killer of the Dead',
+      'Penitent',
+      'Scourge of God'
     ],
     notes: 'You must have at least one insanity to enter this career.',
     source: 'WHFR'
@@ -4698,7 +4819,10 @@ const careers = [
       'Lay Priest',
       'Prelate',
       'Priest',
-      'Scholar'
+      'Scholar',
+      'Catechist',
+      'Cloaked Brother',
+      'Monk'
     ],
     notes: '',
     source: 'WHFR'
@@ -5212,10 +5336,12 @@ const careers = [
     ],
     exits: [
       'Grave Robber',
+      'Initiate (Morr only)',
       'Militiaman',
       'Temple Guardian',
       'Vampire Hunter',
-      'Watchman'
+      'Watchman',
+      'Initiate'
     ],
     notes: '',
     source: 'NDM'
@@ -5303,7 +5429,9 @@ const careers = [
     },
     description: 'The legendary hag mothers are very powerful hag witches, known for their powers of divination, healing, and their influence over the Ancient Widow’s spirits. Most eke out simple lives in rustic huts far from the communities they watch over. These hag mothers rarely leave their haunted homes, forcing those seeking their aid to undertake arduous journeys to reach them. However, a few hag mothers do wander Kislev, following wherever the spirits lead them and sharing their knowledge. Although most appear impossibly old and bent – their twisted spines creaking alarmingly at the smallest movement – many retain their youthful vigour and can be unexpectedly spry.',
     skills: [
-      'Academic Knowledge (Daemonology or Spirits, History or Necromancy, plus any one)',
+      'Academic Knowledge (Daemonology or Spirits',
+      'History or Necromancy',
+      'plus any one)',
       'Animal Care',
       'Charm Animal',
       'Command',
@@ -5450,7 +5578,8 @@ const careers = [
       'Outlaw',
       'Seer',
       'Vagabond',
-      'Witch'
+      'Witch',
+      'Apothecary'
     ],
     notes: 'If you want to be able to cast spells right away you should increase your Magic Characteristic with your free advance during character creation.  Halflings and Dwarfs may not enter this career. Hedge Wizardry is dangerous and highly illegal in the Empire. If caught, you could well be executed.  Think carefully before entering this career.',
     source: 'WHFR'
@@ -5506,9 +5635,12 @@ const careers = [
       'Barber-Surgeon',
       'Charlatan',
       'Hedge Wizard',
+      'Initiate (Ranald, Taal & Rhya)',
       'Outlaw',
       'Scribe',
-      'Zealot'
+      'Zealot',
+      'Hedgemaster',
+      'Initiate'
     ],
     notes: 'If you want to be able to cast spells right away you should increase your Magic Characteristic with your free advance during character creation. Halflings and Dwarfs may not enter this career. Hedge Wizardry is dangerous and highly illegal in the Empire. If caught, you could well be executed. Think carefully before entering this career.',
     source: 'SoE'
@@ -5768,7 +5900,8 @@ const careers = [
       'Scout',
       'Thief',
       'Vagabond',
-      'Veteran'
+      'Veteran',
+      'Mediator'
     ],
     notes: 'Women can only become Herrimaults if disguised as men.',
     source: 'KotG'
@@ -5824,7 +5957,10 @@ const careers = [
     exits: [
       'Politician',
       'Scholar',
-      'Witch Hunter'
+      'Witch Hunter',
+      'Abbot',
+      'Ambassador',
+      'Cantor'
     ],
     notes: '',
     source: 'WHFR'
@@ -6204,7 +6340,16 @@ const careers = [
       'Miner',
       'Scout',
       'Soldier',
-      'Targeteer'
+      'Targeteer',
+      'Carcassonne Shepherd',
+      'Enforcer',
+      'Grail Pilgrim',
+      'Herrimault',
+      'Knight of the Verdant Field',
+      'Man-at-Arms',
+      'Mediator',
+      'Muleskinner',
+      'Swampaire'
     ],
     notes: '',
     source: 'WHFR'
@@ -6285,7 +6430,8 @@ const careers = [
     },
     description: 'The ice witches of Kislev are feared and respected throughout the Old World. They are the darkest winter, the coldest ice, and the cruellest blizzard, and few can bear their presence for long. But being an ice witch is more than simply practicing Ice Magic and defending Kislev from its foes. Ice witches are part of an ancient sisterhood that has long influenced and often ruled the Gospodar tribe – and still does to this day. They are in touch with the wintry spirits of the land and the frozen flows of magic surging through it; thus, they work hard to preserve the old ways and ancient places, keen to ensure their pristine magic remains unsullied and pure.',
     skills: [
-      'Academic Knowledge (Magic, plus any one)',
+      'Academic Knowledge (Magic',
+      'plus any one)',
       'Channelling',
       'Command or Intimidate',
       'Common Knowledge (Kislev, plus any one)',
@@ -6363,16 +6509,20 @@ const careers = [
       'Vampire Hunter',
       'Witch Hunter',
       'Zealot',
+      'Apprentice Witch',
       'Cantor',
       'Catechist',
       'Crusader',
+      'Grave Warden',
+      'Hedgecraft Apprentice',
       'Knight of the Blazing Sun',
       'Lamplighter',
       'Penitent',
       'Pilgrim',
       'Raconteur',
       'Scourge of God',
-      'Temple Guardian'
+      'Temple Guardian',
+      'Verenean Investigator'
     ],
     exits: [
       'Barber-Surgeon',
@@ -6381,7 +6531,12 @@ const careers = [
       'Lay Priest',
       'Priest',
       'Scribe',
-      'Zealot'
+      'Zealot',
+      'Cantor',
+      'Cult Attendant',
+      'Monk',
+      'Penitent',
+      'Temple Guardian'
     ],
     notes: 'As an Initiate you must decide who your patron God is and what church you serve. You can learn more about the faiths of the Old World in Chapter 8: Religion and Belief of the Core Rulebook. Your choice gives you another skill or talent, as detailed in Church Skills and Talents entry of your God’s description.',
     source: 'WHFR'
@@ -6438,7 +6593,9 @@ const careers = [
       'Fence',
       'Merchant',
       'Outlaw',
-      'Smuggler'
+      'Smuggler',
+      'Farmer',
+      'Herrimault'
     ],
     notes: '',
     source: 'WHFR'
@@ -6546,7 +6703,8 @@ const careers = [
       'Bodyguard',
       'Interrogator',
       'Rat Catcher',
-      'Watchman'
+      'Watchman',
+      'Sewer Jack'
     ],
     notes: '',
     source: 'WHFR'
@@ -6598,7 +6756,8 @@ const careers = [
     exits: [
       'Master Runesmith',
       'Scholar',
-      'Shieldbreaker'
+      'Shieldbreaker',
+      'Runelord'
     ],
     notes: 'Only Dwarfs can enter this career.',
     source: 'Realms of Sorcery'
@@ -6652,7 +6811,9 @@ const careers = [
     exits: [
       'Charlatan',
       'Master Wizard',
-      'Scholar'
+      'Scholar',
+      'Astrologer',
+      'Master Vigilant'
     ],
     notes: 'If you are human you must pay a 40 gc fee upon entry to this career to obtain your Licence. Unless you come from a moneyed background, you must also pay one crown in every ten you earn back to your College for the duration of this career. You may attempt to avoid this, but few succeed in defrauding the Orders for long.',
     source: 'WHFR'
@@ -6913,7 +7074,10 @@ const careers = [
       'Virtue of Chivalry'
     ],
     trappings: [
-      'Medium Armour (Mail Shirt, Mail Coif, Leather Jack, Helmet)',
+      'Medium Armour (Mail Shirt',
+      'Mail Coif',
+      'Leather Jack',
+      'Helmet)',
       'Lance',
       'Shield',
       'Light Warhorse with saddle and harness'
@@ -6924,7 +7088,8 @@ const careers = [
       'Squire'
     ],
     exits: [
-      'Knight of the Realm'
+      'Knight of the Realm',
+      'Herrimault'
     ],
     notes: 'Characters who are not male Bretonnian nobles must pretend to be so in order to become Knights Errant.',
     source: 'KotG'
@@ -7128,7 +7293,9 @@ const careers = [
       'Captain',
       'Champion',
       'Noble Lord',
-      'Witch Hunter'
+      'Witch Hunter',
+      'Grandmaster',
+      'Knight of the Raven'
     ],
     notes: '',
     source: 'WHFR'
@@ -7153,7 +7320,10 @@ const careers = [
     },
     description: 'The Fellowship of the Shroud believes in taking the battle to the enemy. Their very best warriors form an order known as the Knights of the Raven, and their mandate is very clear: destroy every Skeleton, Zombie, and Shade upon the earth and exterminate the necromancers and Vampires who summon them. Unlike their sister order the Black Guard, the Knights of the Raven are ruthless and aggressive, seeking out their enemy rather than waiting for Undead to come to them. At the moment, a great many of the knights are stationed in the town of Siegfriedhof of Stirland on the border of Sylvania. So far, they have only conducted raids, but as their numbers and intelligence grows, and the truth about Mannfred’s return becomes undeniable, they will begin a crusade to take that bleak land away from its dark lords once again.',
     skills: [
-      'Academic Knowledge (History, Necromancy, Strategy/Tactics, Theology)',
+      'Academic Knowledge (History',
+      'Necromancy',
+      'Strategy/Tactics',
+      'Theology)',
       'Animal Training',
       'Common Knowledge (any)',
       'Dodge Blow',
@@ -7375,7 +7545,13 @@ const careers = [
       'Initiate',
       'Knight of the Inner Circle',
       'Noble Lord',
-      'Vampire Hunter'
+      'Vampire Hunter',
+      'Black Guard',
+      'Crusader',
+      'Knight Errant',
+      'Knight Panther',
+      'Knight of the Blazing Sun',
+      'Knight of the Raven'
     ],
     notes: '',
     source: 'WHFR'
@@ -7492,7 +7668,8 @@ const careers = [
     ],
     exits: [
       'Friar',
-      'Prelate'
+      'Prelate',
+      'Priest'
     ],
     notes: 'Lay Priests have access to the Skills and Talents of their cult (See Appendix V page 244)',
     source: 'CC'
@@ -7609,7 +7786,9 @@ const careers = [
       'Outlaw',
       'Outrider',
       'Veteran',
-      'Yeoman'
+      'Yeoman',
+      'Mediator',
+      'Wall Warden'
     ],
     notes: 'Women can only enter this career if they are pretending to be men.',
     source: 'KotG'
@@ -7726,7 +7905,10 @@ const careers = [
       'Outlaw',
       'Sergeant',
       'Smuggler',
-      'Thief'
+      'Thief',
+      'Riverwarden',
+      'Thug',
+      'Wrecker'
     ],
     notes: 'During character creation, if you take Common Knowledge (the Wasteland), your character can be from the great port of Marienburg at your option.',
     source: 'WHFR'
@@ -7851,7 +8033,8 @@ const careers = [
       'Crime Lord',
       'Explorer',
       'Outlaw Chief',
-      'Targeteer'
+      'Targeteer',
+      'Cloaked Brother'
     ],
     notes: '',
     source: 'WHFR'
@@ -7876,7 +8059,9 @@ const careers = [
     },
     description: 'The Colleges of Magic are loath to leave their dirty laundry to be washed in public by the Witch Hunters or other authorities. Consequently, each Order employs its own watchdogs and investigators, devoted to discretely exposing those who break their oaths and practice dark magic, necromancy, or diabolism. Since Vampires are so often students of these black arts, these observers also take pride in hunting and destroying the princes of darkness. Magisters vigilant still pay their dues to their College, as per a magister lord, but they are not expected to take apprentices. Their duties across the Empire prevent them from attaining the control of magic that many of their colleagues possess, but they have many other skills and talents useful in other sorts of situations, and they command great respect and fear amongst their own kind.',
     skills: [
-      'Academic Knowledge (Daemonology, Magic, Necromancy)',
+      'Academic Knowledge (Daemonology',
+      'Magic',
+      'Necromancy)',
       'Channelling',
       'Common Knowledge (the Empire and any one)',
       'Gossip',
@@ -7969,7 +8154,8 @@ const careers = [
       'Astrologer',
       'Explorer',
       'Scholar',
-      'Wizard Lord'
+      'Wizard Lord',
+      'Master Vigilant'
     ],
     notes: 'If you are Human you must continue to pay dues to your Order for the duration of this career. Most colleges charge Master Wizards a reduced rate of one crown in every twenty. Elves do not belong to the Orders of Magic, and thus owe nothing.',
     source: 'WHFR'
@@ -8161,7 +8347,13 @@ const careers = [
       'Sergeant',
       'Sewer Jack',
       'Shieldbreaker',
-      'Veteran'
+      'Veteran',
+      'Bondsman',
+      'Cadet',
+      'Gambler',
+      'Horse Master',
+      'Knight of the Verdant Field',
+      'Yeoman'
     ],
     notes: 'During character creation, if you take Common Knowledge (Tilea) and Speak Language (Tilean), your character can be from Tilea at your option.',
     source: 'WHFR'
@@ -8238,7 +8430,8 @@ const careers = [
       'Militiaman',
       'Politician',
       'Racketeer',
-      'Spy'
+      'Spy',
+      'Slaver'
     ],
     notes: '',
     source: 'WHFR'
@@ -8299,7 +8492,15 @@ const careers = [
       'Outrider',
       'Roadwarden',
       'Scout',
-      'Soldier'
+      'Soldier',
+      'Cult Attendant',
+      'Drover',
+      'Exciseman',
+      'Forger',
+      'Horse Coper',
+      'Muleskinner',
+      'Newssheet Vendor',
+      'Pamphleteer'
     ],
     notes: '',
     source: 'WHFR'
@@ -8365,7 +8566,12 @@ const careers = [
       'Messenger',
       'Outlaw',
       'Sergeant',
-      'Thief'
+      'Thief',
+      'Cadet',
+      'Knight of the Verdant Field',
+      'Sewer Jack',
+      'Swampaire',
+      'Temple Guardian'
     ],
     notes: '',
     source: 'WHFR'
@@ -8421,7 +8627,8 @@ const careers = [
       'Mercenary',
       'Scout',
       'Shieldbreaker',
-      'Smuggler'
+      'Smuggler',
+      'Chimneysweep'
     ],
     notes: '',
     source: 'WHFR'
@@ -8472,7 +8679,8 @@ const careers = [
       'Demagogue',
       'Highwayman',
       'Spy',
-      'Student'
+      'Student',
+      'Cantor'
     ],
     notes: '',
     source: 'WHFR'
@@ -8533,7 +8741,8 @@ const careers = [
       'Priest',
       'Scholar',
       'Steward',
-      'Zealot'
+      'Zealot',
+      'Cantor'
     ],
     notes: '',
     source: 'ToS'
@@ -8696,7 +8905,8 @@ const careers = [
       'Cartographer',
       'Explorer',
       'Scholar',
-      'Sea Captain'
+      'Sea Captain',
+      'Astrologer'
     ],
     notes: '',
     source: 'WHFR'
@@ -8823,7 +9033,13 @@ const careers = [
       'Captain',
       'Knight',
       'Scholar',
-      'Sea Captain'
+      'Sea Captain',
+      'Admiral',
+      'Ambassador',
+      'Crusader',
+      'Faceless',
+      'Knight Panther',
+      'Knight of the Blazing Sun'
     ],
     notes: '',
     source: 'WHFR'
@@ -8882,7 +9098,17 @@ const careers = [
       'Politician',
       'Rogue',
       'Squire',
-      'Student'
+      'Student',
+      'Astrologer',
+      'Ataman',
+      'Border Courtier',
+      'Cadet',
+      'Gambler',
+      'Herrimault',
+      'Horse Archer',
+      'Horse Master',
+      'Knight Errant',
+      'Winged Lancer'
     ],
     notes: '',
     source: 'WHFR'
@@ -9005,7 +9231,10 @@ const careers = [
       'Assassin',
       'Captain',
       'Crime Lord',
-      'Demagogue'
+      'Demagogue',
+      'Badlands Ranger',
+      'Border Courtier',
+      'Faceless'
     ],
     notes: '',
     source: 'WHFR'
@@ -9089,7 +9318,12 @@ const careers = [
       'Highwayman',
       'Thief',
       'Vagabond',
-      'Veteran'
+      'Veteran',
+      'Carcassonne Shepherd',
+      'Grail Pilgrim',
+      'Horse Master',
+      'Penitent',
+      'Wrecker'
     ],
     notes: '',
     source: 'WHFR'
@@ -9149,7 +9383,14 @@ const careers = [
     exits: [
       'Coachman',
       'Highwayman',
-      'Mercenary'
+      'Mercenary',
+      'Carcassonne Shepherd',
+      'Drover',
+      'Horse Master',
+      'Knight of the Verdant Field',
+      'Roadwarden',
+      'Scout',
+      'Winged Lancer'
     ],
     notes: '',
     source: 'WHFR'
@@ -9267,7 +9508,32 @@ const careers = [
       'Politician',
       'Servant',
       'Tradesman',
-      'Zealot'
+      'Zealot',
+      'Animal Trainer',
+      'Badlander',
+      'Bonepicker',
+      'Carcassonne Shepherd',
+      'Chimneysweep',
+      'Dung Collector',
+      'Foreman',
+      'Frogwife',
+      'Grail Pilgrim',
+      'Grave Warden',
+      'Hedgecraft Apprentice',
+      'Herrimault',
+      'Horse Archer',
+      'Lamplighter',
+      'Man-at-Arms',
+      'Mediator',
+      'Muleskinner',
+      'Newssheet Vendor',
+      'Sewer Jack',
+      'Stevedore',
+      'Swamp Skimmer',
+      'Swampaire',
+      'Wall Warden',
+      'Winged Lancer',
+      'Wrecker'
     ],
     notes: '',
     source: 'WHFR'
@@ -9378,7 +9644,8 @@ const careers = [
       'Friar',
       'Guild Master',
       'Scholar',
-      'Spy'
+      'Spy',
+      'Monk'
     ],
     notes: '',
     source: 'WHFR'
@@ -9485,7 +9752,8 @@ const careers = [
       'Duellist',
       'Knight',
       'Sergeant',
-      'Veteran'
+      'Veteran',
+      'Horse Master'
     ],
     notes: '',
     source: 'WHFR'
@@ -9540,7 +9808,8 @@ const careers = [
       'Mercenary',
       'Protagonist',
       'Troll Slayer',
-      'Veteran'
+      'Veteran',
+      'Bondsman'
     ],
     notes: '',
     source: 'WHFR'
@@ -9628,7 +9897,10 @@ const careers = [
       'Demagogue',
       'Noble Lord',
       'Racketeer',
-      'Steward'
+      'Steward',
+      'Border Courtier',
+      'Cloaked Brother',
+      'Faceless'
     ],
     notes: '',
     source: 'WHFR'
@@ -9692,7 +9964,8 @@ const careers = [
       'Demagogue',
       'Friar',
       'Politician',
-      'Priest'
+      'Priest',
+      'Warrior Priest'
     ],
     notes: 'Prelates have access to the Skills and Talents of their cult (See Appendix V page 244)',
     source: 'CC'
@@ -9746,7 +10019,9 @@ const careers = [
       'Initiate',
       'Lay Priest',
       'Prelate',
+      'Agent of the Shroud',
       'Ataman',
+      'Black Guard',
       'Cantor',
       'Cult Attendant',
       'Knight of the Verdant Field',
@@ -9758,7 +10033,12 @@ const careers = [
       'Lay Priest',
       'Prelate',
       'Scholar',
-      'Steward'
+      'Steward',
+      'Cantor',
+      'Catechist',
+      'Cult Attendant',
+      'Exorcist',
+      'Warrior Priest'
     ],
     notes: '',
     source: 'WHFR'
@@ -9817,7 +10097,8 @@ const careers = [
       'Pit Fighter',
       'Racketeer',
       'Thief',
-      'Thug'
+      'Thug',
+      'Chekist'
     ],
     notes: '',
     source: 'WHFR'
@@ -9856,7 +10137,16 @@ const careers = [
       'Speak Language (any two)'
     ],
     talents: [
-      'Luck, Seasoned Traveller, Specialist Weapon Group (Two-handed), Strike Mighty Blow, Strike to Injure, Sturdy, Very Resilient, Very Strong, Virtue of the Quest, Warrior Born'
+      'Luck',
+      'Seasoned Traveller',
+      'Specialist Weapon Group (Two-handed)',
+      'Strike Mighty Blow',
+      'Strike to Injure',
+      'Sturdy',
+      'Very Resilient',
+      'Very Strong',
+      'Virtue of the Quest',
+      'Warrior Born'
     ],
     trappings: [
       'Heavy Armour (Full Plate Armour)',
@@ -10127,7 +10417,13 @@ const careers = [
       'Grave Robber',
       'Jailer',
       'Shieldbreaker',
-      'Thief'
+      'Thief',
+      'Bonepicker',
+      'Deepwatcher',
+      'Dung Collector',
+      'Grave Warden',
+      'Lamplighter',
+      'Sewer Jack'
     ],
     notes: '',
     source: 'WHFR'
@@ -10152,7 +10448,12 @@ const careers = [
     },
     description: 'The seas of the Old World are full of terrors, some Human, others subhuman. Among the most feared mariners are the Norse Reavers, brutal warriors who plunder the coastlines in search of foodstuffs, gold, and slaves. They are a merciless lot, hardened from their frequent battles with Imperial sailors and the feeble militias that stand against them. Reavers sail the seas to bring booty back to their settlements in their frozen lands. Others sell their souls to the Ruinous Powers, hoping to attract the attention of their uncaring Gods, and gain the power they so crave.',
     skills: [
-      'Common Knowledge (Bretonnia, the Empire, Lustria, Norsca, Southlands, Tilea',
+      'Common Knowledge (Bretonnia',
+      'the Empire',
+      'Lustria',
+      'Norsca',
+      'Southlands',
+      'Tilea',
       'or the Wasteland)',
       'Consume Alcohol',
       'Dodge Blow',
@@ -10188,7 +10489,9 @@ const careers = [
       'Navigator',
       'Slaver',
       'Veteran',
-      'Warleader'
+      'Warleader',
+      'Marauder',
+      'Whaler'
     ],
     notes: '',
     source: 'ToC'
@@ -10312,7 +10615,11 @@ const careers = [
       'Outrider',
       'Scout',
       'Sergeant',
-      'Toll Keeper'
+      'Toll Keeper',
+      'Cadet',
+      'Horse Master',
+      'Riverwarden',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -10383,7 +10690,12 @@ const careers = [
       'Ex-Convict',
       'Outlaw',
       'Servant',
-      'Thief'
+      'Thief',
+      'Chimneysweep',
+      'Gambler',
+      'Herrimault',
+      'Mediator',
+      'Raconteur'
     ],
     notes: '',
     source: 'WHFR'
@@ -10572,7 +10884,14 @@ const careers = [
       'Litigant',
       'Merchant',
       'Physician',
-      'Steward'
+      'Steward',
+      'Abbot',
+      'Agent of the Shroud',
+      'Astrologer',
+      'Catechist',
+      'Monk',
+      'Pamphleteer',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -10701,6 +11020,7 @@ const careers = [
       'Knight of the Verdant Field',
       'Muleskinner',
       'Steppes Nomad',
+      'Winged Lancer',
       'Yeoman'
     ],
     exits: [
@@ -10708,7 +11028,11 @@ const careers = [
       'Outlaw Chief',
       'Sergeant',
       'Vampire Hunter',
-      'Ghost Strider'
+      'Ghost Strider',
+      'Badlands Ranger',
+      'Cartographer',
+      'Cloaked Brother',
+      'Horse Master'
     ],
     notes: '',
     source: 'WHFR'
@@ -10770,7 +11094,14 @@ const careers = [
       'Apprentice Wizard',
       'Initiate',
       'Navigator',
-      'Scholar'
+      'Scholar',
+      'Cartographer',
+      'Catechist',
+      'Exciseman',
+      'Horned Hunter',
+      'Litigant',
+      'Monk',
+      'Pamphleteer'
     ],
     notes: '',
     source: 'WHFR'
@@ -10829,7 +11160,8 @@ const careers = [
       'Explorer',
       'Noble Lord',
       'Scholar',
-      'Spy'
+      'Spy',
+      'Admiral'
     ],
     notes: '',
     source: 'WHFR'
@@ -10854,7 +11186,9 @@ const careers = [
     },
     description: 'Most Imperial seamen come from the province of Nordland, which has a long stretch of coast on the Sea of Claws. The Greatships, Wolfships, and Wargalleys of the Imperial Fleet patrol these waters, protecting the Empire from Norse longships, Bretonnian buccaneers, and the dreaded fleets of Chaos. Hardened Seaman crew these ships, while their compatriots sail merchantmen, pirate vessels, and other privately owned craft. Elven sailors can be found on the Sea of Claws as well, particularly those engaged by their great Merchant Houses. The activity of the region revolves around Marienburg, the greatest port in the Old World. This city and its surrounding area (known as the Wasteland) used to be the Imperial province of Westerland but it bought its independence years ago. While Marienburg itself is neutral territory, the Sea of Claws is the site of daily clashes. On blood-soaked decks, Seamen earn their rum ration and their booty.',
     skills: [
-      'Common Knowledge (Bretonnia, Norsca, Tilea or the Wasteland)',
+      'Common Knowledge (Bretonnia',
+      'Norsca',
+      'Tilea or the Wasteland)',
       'Consume Alcohol or Perception',
       'Dodge Blow',
       'Row',
@@ -10887,7 +11221,11 @@ const careers = [
       'Mate',
       'Navigator',
       'Rogue',
-      'Smuggler'
+      'Smuggler',
+      'Raconteur',
+      'Reaver',
+      'Whaler',
+      'Wrecker'
     ],
     notes: 'During character creation, if you take Common Knowledge (the Wasteland), your character can be from the great port of Marienburg at your option.',
     source: 'WHFR'
@@ -10923,7 +11261,10 @@ const careers = [
       'Public Speaking'
     ],
     trappings: [
-      'Instruments of Divination (dice, cards, a chicken, etc.)'
+      'Instruments of Divination (dice',
+      'cards',
+      'a chicken',
+      'etc.)'
     ],
     entries: [
       'Hedge Wizard',
@@ -11015,7 +11356,13 @@ const careers = [
       'Captain',
       'Duellist',
       'Judicial Champion',
-      'Knight'
+      'Knight',
+      'Artillerist',
+      'Black Guard',
+      'Border Courtier',
+      'Crusader',
+      'Knight Panther',
+      'Knight of the Blazing Sun'
     ],
     notes: '',
     source: 'WHFR'
@@ -11078,7 +11425,9 @@ const careers = [
       'Messenger',
       'Spy',
       'Thief',
-      'Valet'
+      'Valet',
+      'Lamplighter',
+      'Newssheet Vendor'
     ],
     notes: '',
     source: 'WHFR'
@@ -11203,7 +11552,8 @@ const careers = [
       'Sewer Jack',
       'Smuggler',
       'Tomb Robber',
-      'Veteran'
+      'Veteran',
+      'Deepwatcher'
     ],
     notes: 'Only Dwarfs can have Shieldbreaker as a Starting Career.',
     source: 'WHFR'
@@ -11333,7 +11683,9 @@ const careers = [
     },
     description: 'In the past, slavery was quite common in the Old World. The practice is as old as Humanity, originating in the ancient empire of Khemri, and continued through the various civilisations that rose and fell in the intervening years, leading to the present day. In an evolving economy, slavery is simply impractical. In places like Bretonnia, serfs perform all the work and live lives little better than slaves, but in the Empire, men and women, whilst Peasants, are in charge of their own destinies. Of course, in some remote corners of the Old World, the practice flourishes. Araby is famed for its flesh markets as is Sartosa and even some dark corners in Marienburg. The Norsemen take slaves as well, either from surrendered adversaries or as plunder from one of their raids. Occasionally, they have reason to traffic with unsavoury flesh dealers, and some enterprising Norsemen take up the profession.',
     skills: [
-      'Common Knowledge (Bretonnia, the Empire, or Tilea)',
+      'Common Knowledge (Bretonnia',
+      'the Empire',
+      'or Tilea)',
       'Drive',
       'Evaluate',
       'Follow Trail',
@@ -11438,7 +11790,9 @@ const careers = [
       'Ferryman',
       'Seaman',
       'Shieldbreaker',
-      'Thief'
+      'Thief',
+      'Forger',
+      'Wrecker'
     ],
     notes: '',
     source: 'WHFR'
@@ -11499,7 +11853,12 @@ const careers = [
       'Sergeant',
       'Vagabond',
       'Veteran',
-      'Watchman'
+      'Watchman',
+      'Cadet',
+      'Deepwatcher',
+      'Horse Master',
+      'Knight of the Verdant Field',
+      'Raconteur'
     ],
     notes: '',
     source: 'WHFR'
@@ -11573,7 +11932,9 @@ const careers = [
       'Assassin',
       'Explorer',
       'Master Thief',
-      'Racketeer'
+      'Racketeer',
+      'Cloaked Brother',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -11630,7 +11991,13 @@ const careers = [
       'Noble',
       'Outlaw',
       'Sergeant',
-      'Veteran'
+      'Veteran',
+      'Black Guard',
+      'Cadet',
+      'Horse Master',
+      'Knight Errant',
+      'Knight Panther',
+      'Knight of the Blazing Sun'
     ],
     notes: 'If, during character creation, you take Common Knowledge (Bretonnia) and Speak Language (Breton), your character can be from Bretonnia at your option.',
     source: 'WHFR'
@@ -11687,7 +12054,9 @@ const careers = [
       'Horse Master',
       'Outlaw',
       'Scout',
-      'Vagabond'
+      'Vagabond',
+      'Drover',
+      'Horse Coper'
     ],
     notes: 'You must be Ungol and you must be a member of a nomadic krug',
     source: 'RotIQ'
@@ -11806,7 +12175,8 @@ const careers = [
       'Crime Lord',
       'Fence',
       'Merchant',
-      'Noble'
+      'Noble',
+      'Faceless'
     ],
     notes: '',
     source: 'WHFR'
@@ -11978,7 +12348,22 @@ const careers = [
       'Envoy',
       'Initiate',
       'Physician',
-      'Scholar'
+      'Scholar',
+      'Agent of the Shroud',
+      'Apothecary',
+      'Apprentice Runesmith',
+      'Astrologer',
+      'Cadet',
+      'Catechist',
+      'Embalmer',
+      'Forger',
+      'Gambler',
+      'Litigant',
+      'Monk',
+      'Newssheet Vendor',
+      'Pamphleteer',
+      'Penitent',
+      'Raconteur'
     ],
     notes: '',
     source: 'WHFR'
@@ -12279,7 +12664,13 @@ const careers = [
       'Smuggler',
       'Toll Keeper',
       'Tomb Robber',
-      'Vagabond'
+      'Vagabond',
+      'Cat Burglar',
+      'Charlatan',
+      'Chimneysweep',
+      'Fence',
+      'Gambler',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -12335,7 +12726,8 @@ const careers = [
       'Interrogator',
       'Mercenary',
       'Pit Fighter',
-      'Racketeer'
+      'Racketeer',
+      'Chekist'
     ],
     notes: '',
     source: 'WHFR'
@@ -12451,7 +12843,9 @@ const careers = [
       'Rat Catcher',
       'Shieldbreaker',
       'Thief',
-      'Vampire Hunter'
+      'Vampire Hunter',
+      'Agent of the Shroud',
+      'Ex-Convict'
     ],
     notes: '',
     source: 'WHFR'
@@ -12490,20 +12884,35 @@ const careers = [
       'Dealmaker or Savvy'
     ],
     trappings: [
-      'Light Armour (Leather Jerkin), 1d10 gc'
+      'Light Armour (Leather Jerkin)',
+      '1d10 gc'
     ],
     entries: [
+      'Barber-Surgeon',
       'Burgher',
       'Camp Follower',
       'Dilettante',
+      'Peasant',
+      'Watchman',
       'Forger',
       'Frogwife',
-      'Peasant',
-      'Stevedore',
-      'Watchman'
+      'Stevedore'
     ],
     exits: [
-      'None'
+      'Artisan',
+      'Cartographer',
+      'Engineer',
+      'Envoy',
+      'Farmer',
+      'Merchant',
+      'Militiaman',
+      'Zealot',
+      'Embalmer',
+      'Foreman',
+      'Forger',
+      'Freeholder',
+      'Grail Pilgrim',
+      'Wall Warden'
     ],
     notes: '',
     source: 'WHFR'
@@ -12639,7 +13048,16 @@ const careers = [
       'Rapscallion',
       'Scout',
       'Thief',
-      'Woodsman'
+      'Woodsman',
+      'Badlander',
+      'Bonepicker',
+      'Carcassonne Shepherd',
+      'Dung Collector',
+      'Gambler',
+      'Grail Pilgrim',
+      'Man-at-Arms',
+      'Raconteur',
+      'Swamp Skimmer'
     ],
     notes: '',
     source: 'WHFR'
@@ -12693,7 +13111,8 @@ const careers = [
       'Rogue',
       'Squire',
       'Steward',
-      'Student'
+      'Student',
+      'Cult Attendant'
     ],
     notes: '',
     source: 'WHFR'
@@ -12761,7 +13180,10 @@ const careers = [
       'Initiate',
       'Knight',
       'Targeteer',
-      'Witch Hunter'
+      'Witch Hunter',
+      'Agent of the Shroud',
+      'Black Guard',
+      'Killer of the Dead'
     ],
     notes: '',
     source: 'WHFR'
@@ -12832,6 +13254,7 @@ const careers = [
       'Riverwarden'
     ],
     exits: [
+      'Initiate (Verena)',
       'Scholar',
       'Spy',
       'Witch Hunter'
@@ -12912,6 +13335,7 @@ const careers = [
       'Streltsi',
       'Warleader',
       'Whaler',
+      'Winged Lancer',
       'Wrecker'
     ],
     exits: [
@@ -12920,7 +13344,11 @@ const careers = [
       'Judicial Champion',
       'Outlaw Chief',
       'Sergeant',
-      'Targeteer'
+      'Targeteer',
+      'Ataman',
+      'Cloaked Brother',
+      'Crusader',
+      'Faceless'
     ],
     notes: '',
     source: 'WHFR'
@@ -13080,7 +13508,8 @@ const careers = [
     exits: [
       'Captain',
       'Champion',
-      'Veteran'
+      'Veteran',
+      'Reaver'
     ],
     notes: 'Chaos Warrior is described in Chapter XIII: Slaves to Darkness of Tome of Corruption. ',
     source: 'Tome of Corruption'
@@ -13258,7 +13687,14 @@ const careers = [
       'Sergeant',
       'Sewer Jack',
       'Soldier',
-      'Tradesman'
+      'Tradesman',
+      'Chekist',
+      'Deepwatcher',
+      'Enforcer',
+      'Litigant',
+      'Streltsi',
+      'Temple Guardian',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -13359,7 +13795,8 @@ const careers = [
       'Strike Mighty Blow or Strike to Injure'
     ],
     trappings: [
-      'At least full suits of mail, though some accent their armour with bits of plate',
+      'At least full suits of mail',
+      'though some accent their armour with bits of plate',
       'From their backs ﬂy winged banners',
       'Kislevite warhorse equipped with saddles and harnesses',
       'lances',
@@ -13370,10 +13807,16 @@ const careers = [
     ],
     entries: [
       'Horse Master',
+      'Noble',
+      'Outrider',
+      'Peasant',
       'Streltsi'
     ],
     exits: [
-      'None'
+      'Captain',
+      'Horse Master',
+      'Scout',
+      'Veteran'
     ],
     notes: '',
     source: 'Realm of the Ice Queen'
@@ -13510,7 +13953,12 @@ const careers = [
       'Champion',
       'Demagogue',
       'Initiate',
-      'Knight of the Inner Circle'
+      'Knight of the Inner Circle',
+      'Black Guard',
+      'Cloaked Brother',
+      'Killer of the Dead',
+      'Knight Panther',
+      'Verenean Investigator'
     ],
     notes: '',
     source: 'WHFR'
@@ -13622,7 +14070,8 @@ const careers = [
     ],
     exits: [
       'Explorer',
-      'Guild Master'
+      'Guild Master',
+      'Ambassador'
     ],
     notes: 'Wizard Lords no longer pay dues to their Order. They are, however, charged with preserving the purity of their order, rooting out Chaos worshippers, and ensuring the Orders receive the respect (and monies) due to them.',
     source: 'WHFR'
@@ -13674,7 +14123,11 @@ const careers = [
       'Militiaman',
       'Outlaw',
       'Scout',
-      'Vagabond'
+      'Vagabond',
+      'Carcassonne Shepherd',
+      'Herrimault',
+      'Knight of the Verdant Field',
+      'Man-at-Arms'
     ],
     notes: '',
     source: 'WHFR'
@@ -13795,7 +14248,8 @@ const careers = [
       'Mercenary',
       'Outlaw Chief',
       'Scout',
-      'Sergeant'
+      'Sergeant',
+      'Village Elder'
     ],
     notes: 'Women can only become Yeomen if disguised as men.',
     source: 'WHFR'
@@ -13847,14 +14301,18 @@ const careers = [
       'Hedgecraft Apprentice',
       'Monk',
       'Newssheet Vendor',
-      'Pilgrim'
+      'Pilgrim',
+      'Tradesman'
     ],
     exits: [
       'Agitator',
       'Initiate',
       'Flagellant',
       'Friar',
-      'Outlaw'
+      'Outlaw',
+      'Catechist',
+      'Penitent',
+      'Temple Guardian'
     ],
     notes: '',
     source: 'WHFR'

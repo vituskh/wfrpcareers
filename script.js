@@ -43,8 +43,8 @@ function findCareer(arrayToSearch, nameToSearchFor) {
 function returnCareersButtonsHTML(arrayToSearch, careerType) {
 	var text = ''
 	for (var i = 0; i < arrayToSearch.length; i++) {
-		if(arrayToSearch[i].type.toLowerCase() == careerType.toLowerCase()) text = text + '<button id="button_' + arrayToSearch[i].name.replace(/ /g, '') + '" class="showCareer" onclick="showCareer(\'' + arrayToSearch[i].name + '\')"> ' + arrayToSearch[i].name + '</button>\n'
-		
+		if (arrayToSearch[i].type.toLowerCase() == careerType.toLowerCase()) text = text + '<button id="button_' + arrayToSearch[i].name.replace(/ /g, '') + '" class="showCareer" onclick="showCareer(\'' + arrayToSearch[i].name + '\')"> ' + arrayToSearch[i].name + '</button>\n'
+
 	}
 	return text
 };
@@ -115,65 +115,76 @@ function showCareer(careerName) {
 		document.getElementById(previousButtonName).classList.remove('darkred');
 	}
 
+	career.fixedEntries = []
+	for (let i = 0; i < career.entries.length; i++) {
+		const element = career.entries[i];
+		career.fixedEntries.push(element.split(" (")[0])
+	}
+	career.fixedExits = []
+	for (let i = 0; i < career.exits.length; i++) {
+		const element = career.exits[i];
+		career.fixedExits.push(element.split(" (")[0])
+	}
+
 	// set current to orange
 	document.getElementById("button_" + career.name.replace(/ /g, '')).classList.add("orange")
 
 	// set exits to green
 
-	for (let i = 0; i < career.exits.length; i++) {
-		const element = career.exits[i];
+	for (let i = 0; i < career.fixedExits.length; i++) {
+		const element = career.fixedExits[i];
 		for (let o = 0; o < careers.length; o++) {
 			const element2 = careers[o];
 			if (element2.name.toLowerCase() == element.toLowerCase()) {
 				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.add("green")
-				
+
 			}
 		}
 	}
 
 	// set entries to red
 
-	for (let i = 0; i < career.entries.length; i++) {
-		const element = career.entries[i];
+	for (let i = 0; i < career.fixedEntries.length; i++) {
+		const element = career.fixedEntries[i];
 		for (let o = 0; o < careers.length; o++) {
 			const element2 = careers[o];
 			if (element2.name.toLowerCase() == element.toLowerCase()) {
 				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.add("red")
-				
+
 			}
 		}
 	}
 
 	// set entries that are also exits to dark red
 
-	for (let i = 0; i < career.entries.length; i++) {
-		const element = career.entries[i];
-		if(career.exits.indexOf(element) == -1) continue
+	for (let i = 0; i < career.fixedEntries.length; i++) {
+		const element = career.fixedEntries[i];
+		if (career.fixedExits.indexOf(element) == -1) continue
 		for (let o = 0; o < careers.length; o++) {
 			const element2 = careers[o];
 			if (element2.name.toLowerCase() == element.toLowerCase()) {
 				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.add("darkred")
 				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.remove("red")
 				document.getElementById("button_" + element2.name.replace(/ /g, '')).classList.remove("green")
-				
+
 			}
 		}
 	}
-	
+
 	var cleanExits = []
-	for (let i = 0; i < career.exits.length; i++) {
-		const element = career.exits[i];
+	for (let i = 0; i < career.fixedExits.length; i++) {
+		const element = career.fixedExits[i];
 		if (element != "None" && element != "All") cleanExits.push(element)
 	}
 	var cleanEntries = []
-	for (let i = 0; i < career.entries.length; i++) {
-		const element = career.entries[i];
+	for (let i = 0; i < career.fixedEntries.length; i++) {
+		const element = career.fixedEntries[i];
 		if (element != "None" && element != "All") cleanEntries.push(element)
 	}
 
 	arrPreviousButtonNames = cleanExits.concat(cleanEntries);
 	arrPreviousButtonNames.push(career.name);
-};	
+};
 
 window.onload = (event) => {
 	document.getElementById("basiccareers").innerHTML = returnCareersButtonsHTML(careers, "basic")
