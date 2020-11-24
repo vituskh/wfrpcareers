@@ -34,6 +34,14 @@ h6 {
 	font-size: 0.8em;
 	font-weight: 400;
 }*/
+
+.showCareer {
+	margin-top: 0.2%;
+	margin-bottom: 0.2%;
+	border-radius: 12%;
+	
+}
+
 .bigletter {
 	font-size: 125% ;
 }
