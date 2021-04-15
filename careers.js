@@ -5544,7 +5544,7 @@ const careers = [
     secondstats: {
       attacks: 0,
       wounds: 2,
-      magic: 0
+      magic: 1
     },
     description: 'Hedge Wizards are magically talented people with no formal magical training. Using instinct, luck, and superstitious trappings, they can perform minor, specialized spells. Though they may not always be aware of it, Hedge Wizards dally with danger every time they use their charms and cantrips. For this reason the Witch Hunters eagerly track and execute these unfortunate folk who all too often unconsciously invite daemons and disaster into the world. Some Hedge Wizards take the sensible route and join the Orders of Magic, whilst others hide their shameful secret.',
     skills: [
