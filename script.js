@@ -25,96 +25,152 @@ var arrPreviousButtonNames = [];
 		notes: "",
 		entries: "",
 		exits: "",
-		description: ""
+		description: "",
+		source: "",
 	},	
 */
 
 
 
 
-function findCareer(arrayToSearch, nameToSearchFor) {
-	for (var i = 0; i < arrayToSearch.length; i++) {
-		if (arrayToSearch[i].name.toLowerCase() == nameToSearchFor.toLowerCase()) {
-			return arrayToSearch[i];
-		}
+var careers = new Map()
+var basicCareers = []
+var advancedCareers = []
+//Convert array to map 
+for (let i = 0; i < careersJSON.length; i++) {
+	var e = careersJSON[i];
+	const name = e.name
+	delete e.name
+	careers.set(name, e)
+	if (e.type === "Basic") basicCareers.push(name)
+	else advancedCareers.push(name)
+}
+
+
+function loadButtons(array, location) {
+	var fragment = new DocumentFragment()
+	for (let i = 0; i < array.length; i++) {
+		const element = document.createElement("button")
+		element.classList = "careerButton"
+		element.textContent = array[i]
+		element.onclick = () => { showCareer(array[i]) }
+		element.id = "career_" + array[i]
+		fragment.append(element)
 	}
-};
+	location.append(fragment)
+}
 
-function returnCareersButtonsHTML(arrayToSearch, careerType) {
-	var text = ''
-	for (var i = 0; i < arrayToSearch.length; i++) {
-		if (arrayToSearch[i].type.toLowerCase() == careerType.toLowerCase()) text = text + '<button id="button_' + arrayToSearch[i].name.replace(/ /g, '') + '" class="showCareer" onclick="showCareer(\'' + arrayToSearch[i].name + '\')"> ' + arrayToSearch[i].name + '</button>\n'
-
+/**
+ * 
+ * @param {Object} stats
+ * @param {Number} stats.ws
+ * @param {Number} stats.bs
+ * @param {Number} stats.s
+ * @param {Number} stats.t
+ * @param {Number} stats.ag
+ * @param {Number} stats.int
+ * @param {Number} stats.wp
+ * @param {Number} stats.fel
+ */
+function loadMainStats(stats) {
+	Object.keys(stats).forEach(key => {
+		document.getElementById(`mainStats_${key}`).textContent = stats[key]
+	})
+}
+function loadSecondStats(stats) {
+	Object.keys(stats).forEach(key => {
+		document.getElementById(`secondStats_${key}`).textContent = stats[key]
+	})
+}
+function careerInfoToString(array) {
+	var returnVal = array[0].toString()
+	for (let i = 1; i < array.length; i++) {
+		returnVal += ", " + array[i]
 	}
-	return text
-};
+	return returnVal
+}
 
+function doubleIndexOf(array,searchFor) {
+	for (let i = 0; i < array.length; i++) {
+		if(array[i].toLowerCase().indexOf(searchFor.toLowerCase()) !== -1) return i
+	}
+	return -1
+}
+
+/**
+ * 
+ * @param {String} careerName 
+ */
 function showCareer(careerName) {
 	console.log(careerName);
-	var career = findCareer(careers, careerName);
+	/**
+	 * @type {{mainstats: {
+			ws: Number,
+			bs: Number,
+			s: Number,
+			t: Number,
+			ag: Number,
+			int: Number,
+			wp: Number,
+			fel: Number
+		},
+		secondstats: {
+			attacks: Number,
+			wounds: Number,
+			magic: Number
+		},
+		skills: String[],
+		talents: String[],
+		trappings: String[],
+		notes: String,
+		entries: String[],
+		exits: String[],
+		description: String,
+		source: String,}}
+	 */
+	var career = careers.get(careerName)
 
+	loadMainStats(career.mainstats)
+	loadSecondStats(career.secondstats)
 
-	document.getElementById("valueName").innerHTML = (careerName);
-	document.getElementById("valueType").innerHTML = (career.type);
-	document.getElementById("valueWS").innerHTML = (career.mainstats.ws);
-	document.getElementById("valueBS").innerHTML = (career.mainstats.bs);
-	document.getElementById("valueS").innerHTML = (career.mainstats.s);
-	document.getElementById("valueT").innerHTML = (career.mainstats.t);
-	document.getElementById("valueAg").innerHTML = (career.mainstats.ag);
-	document.getElementById("valueInt").innerHTML = (career.mainstats.int);
-	document.getElementById("valueWP").innerHTML = (career.mainstats.wp);
-	document.getElementById("valueFel").innerHTML = (career.mainstats.fel);
-	document.getElementById("valueA").innerHTML = (career.secondstats.attacks);
-	document.getElementById("valueW").innerHTML = (career.secondstats.wounds);
-	document.getElementById("valueSB").innerHTML = "-"
-	document.getElementById("valueTB").innerHTML = "-"
-	document.getElementById("valueM").innerHTML = "-"
-	document.getElementById("valueMag").innerHTML = (career.secondstats.magic);
-	document.getElementById("valueIP").innerHTML = "-"
-	document.getElementById("valueFP").innerHTML = "-"
-	document.getElementById("valueDescription").innerHTML = (career.description);
-	document.getElementById("valueSource").innerHTML = (career.source);
-	var skills = ""
-	for (let i = 0; i < career.skills.length; i++) {
-		const element = career.skills[i];
-		skills += element + ", "
-	}
-	document.getElementById("valueSkills").innerHTML = (skills);
-	var talents = ""
-	for (let i = 0; i < career.talents.length; i++) {
-		const element = career.talents[i];
-		talents += element + ", "
-	}
-	document.getElementById("valueTalents").innerHTML = (talents);
-	var trappings = ""
-	for (let i = 0; i < career.trappings.length; i++) {
-		const element = career.trappings[i];
-		trappings += element + ", "
-	}
-	document.getElementById("valueTrappings").innerHTML = (trappings);
-	var entries = ""
-	for (let i = 0; i < career.entries.length; i++) {
-		const element = career.entries[i];
-		entries += element + ", "
-	}
-	document.getElementById("valueEntries").innerHTML = (entries);
-	var exits = ""
-	for (let i = 0; i < career.exits.length; i++) {
-		const element = career.exits[i];
-		exits += element + ", "
-	}
-	document.getElementById("valueExits").innerHTML = (exits);
-	document.getElementById("valueNotes").innerHTML = (career.notes);
+	document.getElementById("selectedCareerName").textContent = careerName
+	document.getElementById("careerInfo_type").textContent = career.type
+	document.getElementById("careerInfo_description").textContent = career.description
+	document.getElementById("careerInfo_source").textContent = career.source
+	document.getElementById("careerInfo_skills").textContent = careerInfoToString(career.skills)
+	document.getElementById("careerInfo_talents").textContent = careerInfoToString(career.talents)
+	document.getElementById("careerInfo_trappings").textContent = careerInfoToString(career.trappings)
+	document.getElementById("careerInfo_entries").textContent = careerInfoToString(career.entries)
+	document.getElementById("careerInfo_exits").textContent = careerInfoToString(career.exits)
 
 	// reset previous button colors
-	for (var p = 0; p < arrPreviousButtonNames.length; p++) {
-		var previousButtonName = 'button_' + arrPreviousButtonNames[p].replace(/ /g, '');
-		document.getElementById(previousButtonName).classList.remove('green');
-		document.getElementById(previousButtonName).classList.remove('orange');
-		document.getElementById(previousButtonName).classList.remove('red');
-		document.getElementById(previousButtonName).classList.remove('darkred');
+	var buttons = document.querySelectorAll(".careerButton:not(.example)")
+	for (let i = 0; i < buttons.length; i++) {
+		const element = buttons[i];
+		element.classList.value = "careerButton"
+	}
+	document.getElementById("career_" + careerName).classList += " careerChosen"
+	var fixedExits = []
+	career.exits.forEach(element => {
+		if(element.split(" (")[0] !== element) {
+			fixedExits.push({name: element.split(" (")[0], special:true})
+		} else {
+			fixedExits.push({name: element, special: false})
+		}
+	});
+	if(career.entries.toString() !== "None")
+	for (let i = 0; i < career.entries.length; i++) {
+		document.getElementById("career_" + career.entries[i]).classList += " careerEntry"
+	}
+	for (let i = 0; i < fixedExits.length; i++) {
+		if(fixedExits[i].special) {
+			document.getElementById("career_" + fixedExits[i].name).classList += " careerExit careerSpecial"
+		} else {
+			document.getElementById("career_" + fixedExits[i].name).classList += " careerExit"
+		}
 	}
 
+	/*
 	career.fixedEntries = []
 	for (let i = 0; i < career.entries.length; i++) {
 		const element = career.entries[i];
@@ -184,9 +240,46 @@ function showCareer(careerName) {
 
 	arrPreviousButtonNames = cleanExits.concat(cleanEntries);
 	arrPreviousButtonNames.push(career.name);
+	*/
 };
 
+
+
 window.onload = (event) => {
-	document.getElementById("basiccareers").innerHTML = returnCareersButtonsHTML(careers, "basic")
-	document.getElementById("advancedcareers").innerHTML = returnCareersButtonsHTML(careers, "advanced")
+	loadButtons(basicCareers, document.getElementById("basicCareers"))
+	loadButtons(advancedCareers, document.getElementById("advancedCareers"))
+
+
+	document.querySelector("#selectForm").addEventListener("submit", function (event) {
+		event.preventDefault()
+		var input = document.getElementById("chooseByName")
+		if (careers.has(input.value)) {
+			showCareer(input.value)
+			input.value = ""
+		} else {
+			alert("Denne career eksisterer ikke.")
+			input.value = ""
+		}
+	})
+
+	document.querySelector("#search").addEventListener("submit", function (event) {
+		event.preventDefault()
+		
+		var buttons = document.querySelectorAll(".careerButton:not(.example)")
+		for (let i = 0; i < buttons.length; i++) {
+			const element = buttons[i];
+			element.classList.value = "careerButton"
+		}
+		
+		var searchingIn = document.getElementById("searchIn")
+		var searchingFor = document.getElementById("chooseValue")
+		careers.forEach((value, key) => {
+			if (doubleIndexOf(value[searchingIn.value], searchingFor.value) !== -1) {
+				document.getElementById("career_" + key).classList = "careerButton searchResult"
+			}
+		})
+
+		searchingIn.value = ""
+		searchingFor.value = ""
+	})
 }

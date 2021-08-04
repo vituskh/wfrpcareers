@@ -1,25 +1,153 @@
-<!--development version: 1-->
-<!-- saved from url=(0040)http://bindslet.dk/rpg/whfrpcareers.html -->
-<html><!-- version 2.0 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>WFRP 2nd Edition Careers</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="whfrpstyle.css">
-	
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-	
+
+
 	<script src="careers.js"></script>
 	<script src="script.js"></script>
-	<script src="https://vitusverden.github.io/vitusresources/script.js"></script> <!--Vitus's navbar & dark theme osv-->
+	<script src="../vitusresources/script.js"></script>
+	<!--Vitus's navbar & dark theme osv-->
 
 </head>
 
 <body data-gr-c-s-loaded="true">
 	<h2>WFRP 2nd Careers</h2>
-	<i>v1.1</i>
+	<h3><br>
+		Bemærk: Siden er meget inspireret af <a
+			href="http://bindslet.dk/rpg/whfrpcareers.html">http://bindslet.dk/rpg/whfrpcareers.html</a>, så en hel del
+		credit går til dem.
+	</h3>
+	<i>v2.0</i>
 
 	<hr>
 
+
+	<div id="selectedCareerDiv" class="row">
+		<h2 class="centerself cinzel" id="selectedCareerName">Ingen valgt career</h2>
+
+		<p class="column">
+			<b class="cinzel">Description</b><br>
+			<span class="playfair" id="careerInfo_description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Dignissimos debitis asperiores, explicabo tempora ex rerum. Rem maiores amet, illo, repudiandae
+				doloribus, error quis mollitia quo ea fugit iste obcaecati totam?</span>
+		</p>
+
+		<div class="column playfair">
+			<div id="selectedCareerAdvanceScheme">
+				<b class="centerself">Advance Scheme</b>
+				<p>Main Profile</p>
+				<table id="selectedCareerMainProfile">
+					<thead>
+						<tr>
+							<th><b>WS</b></th>
+							<th><b>BS</b></th>
+							<th><b>S</b></th>
+							<th><b>T</b></th>
+							<th><b>Ag</b></th>
+							<th><b>Int</b></th>
+							<th><b>WP</b></th>
+							<th><b>Fel</b></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="mainStats_ws">&mdash;</td>
+							<td id="mainStats_bs">&mdash;</td>
+							<td id="mainStats_s">&mdash;</td>
+							<td id="mainStats_t">&mdash;</td>
+							<td id="mainStats_ag">&mdash;</td>
+							<td id="mainStats_int">&mdash;</td>
+							<td id="mainStats_wp">&mdash;</td>
+							<td id="mainStats_fel">&mdash;</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Secondary Profile</p>
+				<table id="selectedCareerMainProfile">
+					<thead>
+						<tr>
+							<th><b>A</b></th>
+							<th><b>W</b></th>
+							<th><b>SB</b></th>
+							<th><b>TB</b></th>
+							<th><b>M</b></th>
+							<th><b>Mag</b></th>
+							<th><b>IP</b></th>
+							<th><b>FP</b></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="secondStats_attacks">&mdash;</td>
+							<td id="secondStats_wounds">&mdash;</td>
+							<td>&mdash;</td>
+							<td>&mdash;</td>
+							<td>&mdash;</td>
+							<td id="secondStats_magic">&mdash;</td>
+							<td>&mdash;</td>
+							<td>&mdash;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p><i>Skills: </i> <span id="careerInfo_skills"></span></p>
+			<p><i>Talents: </i> <span id="careerInfo_talents"></span></p>
+			<p><i>Trappings: </i> <span id="careerInfo_trappings"></span></p>
+			<p><i>Career Entries: </i> <span id="careerInfo_entries"></span></p>
+			<p><i>Career Exits: </i> <span id="careerInfo_exits"></span></p>
+			<p><i>Type: </i> <span id="careerInfo_type"></span></p>
+			<p><i>From book: </i> <span id="careerInfo_source"></span></p>
+			<p><span id="careerInfo_notes"></span></p>
+		</div>
+	</div>
+
+
+	<h3>Careers</h3>
+	<button disabled class="example careerButton careerEntry">Career Entry</button>
+	<button disabled class="example careerButton careerChosen">Valgt Career</button>
+	<button disabled class="example careerButton careerExit">Career Exit</button>
+	<button disabled class="example careerButton careerEntry careerExit">Career Entry/Exit</button>
+	<button disabled class="example careerButton careerSpecial">Special (se Exits, bruges til krav)</button> 
+	<button disabled class="example careerButton searchResult">Søgeresultat</button>
+	<br><br>
+	<label for="selectForm">Vælg career baseret på navn:</label>
+	<form id="selectForm" action="">
+		<input type="text" id="chooseByName" placeholder="Navn">'
+		<button
+			type="submit">Find</button></form>
+
+	<label for="search">Find alle careers med bestemt ting:</label>
+	<form id="search" action="">
+		<input type="text" required id="chooseValue" placeholder="Hvad søger du efter?">
+		<select id="searchIn" required>
+			<option value="" selected>Vælg hvad du søger i</option>
+			<option value="skills">Skill</option>
+			<option value="talents">Talent</option>
+			<option value="trappings">Trapping</option>
+		</select>
+		<button type="submit">Find</button>
+	</form>
+
+
+	<h4>Basic Careers</h4>
+	<div id="basicCareers">
+
+	</div>
+	<h4>Advanced Careers</h4>
+	<div id="advancedCareers">
+
+	</div>
+
+
+
+	<hr>
+	<!--
 	<div class="specificCareer">
 		<h2>Detailed Careers</h2>
 		<div>
@@ -128,17 +256,21 @@
 			<b>Source:</b> <span id="valueSource"></span>
 			</p>
 		</div>
-	</div>
+	</div>-->
 
-	
 	<p>
-		</p><h6>
-			This is a fan created page, honoring the Warhammer Fantasy Roleplay. This page attempts to provide tool to enhance the experience of playing that game.
-			<br>
-			Much of the content is the property of Games Workshop, and Cubicle 7. No infringement of their property is intended.
-			<br>
-			Meget et ripoff af <a href="http://bindslet.dk/rpg/whfrpcareers.html">http://bindslet.dk/rpg/whfrpcareers.html</a> men har fixet nogle ting
-		</h6>
+	</p>
+	<h6>
+		This is a fan created page, honoring the Warhammer Fantasy Roleplay. This page attempts to provide tool to
+		enhance the experience of playing that game.
+		<br>
+		Much of the content is the property of Games Workshop, and Cubicle 7. No infringement of their property is
+		intended.
+	</h6>
 	<p></p>
-  
-</div></div></body></html>
+
+	</div>
+	</div>
+</body>
+
+</html>
