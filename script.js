@@ -46,6 +46,7 @@ for (let i = 0; i < careersJSON.length; i++) {
 	else advancedCareers.push(name)
 }
 
+careersJSON = 0
 
 function loadButtons(array, location) {
 	var fragment = new DocumentFragment()
